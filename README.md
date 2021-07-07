@@ -1,8 +1,9 @@
 # Welcome aboard to AcroCharge!
 
-Here you can fund all you need to know in order for a more comfort onboard process (tech wise)
+Here you can find all you need to know in order for a more comfortable onboard process (tech-wise)
 
-we sure some staff here you know, but it's here for a referents guid
+we sure some staff here you know, but it's here for a references guide
+
 ## Code
 here you will find all you need - code related
 ### General
@@ -21,11 +22,14 @@ here you will find all you need - code related
 * [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 
 ### Common Libraries
-* we are using mongodb as our main DB and [mongoose](https://mongoosejs.com/docs/guide.html) as our ORM
+## Backend libraries
+* We are using mongodb as our main DB and [mongoose](https://mongoosejs.com/docs/guide.html) as our ORM
+## Frontend libraries
+* We are using [tailwindui](https://tailwindui.com/) as our main CSS framework, alongside [styledcomponents](https://styled-components.com/)
+* As a fetch, sync, update and cache data in the client side, we are using [Reach Query](https://react-query.tanstack.com/)
 
-
-### FrameWorks
-* **Nest.js** framework in use in some of our backend service. here you can find [Nest.js Documentation](https://docs.nestjs.com/)
+### Frameworks
+* **Nest.js** framework in use in some of our backend services. here you can find [Nest.js Documentation](https://docs.nestjs.com/)
 * we're using **Next.js** framework in our client service. here you can find [Next.js Documentation](https://nextjs.org/docs)
 
 
@@ -34,14 +38,13 @@ In AcroCharge we are working in a microservices' architecture for our services. 
 
 ### Basics
 * [Docker](https://docs.docker.com/get-started/) - our services software containers
-* [Kubernetes](https://kubernetes.io/docs/tutorials/) - maneging our dockers deployment and etc'
+* [Kubernetes](https://kubernetes.io/docs/tutorials/) - managing our dockers deployment and etc'
 
 ### Mandatory
-in order to manage our monorepo, our services, dependencies, common libraries we ar using [NX framework](https://nx.dev/latest/angular/getting-started/intro).
-this tool is the one you're going to work with the most, so we advise to learn it well.
+In order to manage our monorepo, our services, dependencies, and common libraries we are using [NX framework](https://nx.dev/latest/angular/getting-started/intro).
+This tool is the one you're going to work with the most, so we advise you to learn it well.
 
 ### Tools
-* [MongoDB](https://www.mongodb.com/) - Our Main DB 
+* [MongoDB](https://www.mongodb.com/) - Our Main DB
 * [RabbitMQ](https://www.rabbitmq.com/) - Message brokers
 * [RabbitMQ](https://redis.io/) - In-memory data structure store using for cache
-
