@@ -21,10 +21,10 @@ here you will find all you need - code related
 ### Node.js
 * [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 
-### Common Libraries
-## Backend libraries
+## Common Libraries
+### Backend libraries
 * We are using mongodb as our main DB and [mongoose](https://mongoosejs.com/docs/guide.html) as our ORM
-## Frontend libraries
+### Frontend libraries
 * We are using [tailwindui](https://tailwindui.com/) as our main CSS framework, alongside [styledcomponents](https://styled-components.com/)
 * As a fetch, sync, update and cache data in the client side, we are using [Reach Query](https://react-query.tanstack.com/)
 
