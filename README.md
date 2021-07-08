@@ -47,7 +47,7 @@ This tool is the one you're going to work with the most, so we advise you to lea
 ### Tools
 * [MongoDB](https://www.mongodb.com/) - Our Main DB
 * [RabbitMQ](https://www.rabbitmq.com/) - Message brokers
-* [RabbitMQ](https://redis.io/) - In-memory data structure store using for cache
+* [Redis](https://redis.io/) - In-memory data structure store using for cache
 
 ## Conventions
 
