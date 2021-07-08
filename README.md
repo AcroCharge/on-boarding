@@ -60,6 +60,6 @@ our branches naming have a few restrictions:
 
 Example: NANO-1111-add-xx 
 
-## Code Style
+### Code Style
 
 we are using [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html) 
