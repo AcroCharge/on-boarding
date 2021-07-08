@@ -52,7 +52,7 @@ This tool is the one you're going to work with the most, so we advise you to lea
 ## Conventions
 
 ### Git Branch Naming
-our branches naming have a few points:
+our branches naming have a few restrictions:
 * start with JIRA ticket number
 * short description ( one/two words)
 * All letters beside the ticket number are lowercase
