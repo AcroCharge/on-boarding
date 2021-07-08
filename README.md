@@ -59,3 +59,7 @@ our branches naming have a few restrictions:
 * branch name characters limit to 30
 
 Example: NANO-1111-add-xx 
+
+## Code Style
+
+we are using [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html) 
