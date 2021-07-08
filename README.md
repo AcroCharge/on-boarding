@@ -58,4 +58,4 @@ our branches naming have a few points:
 * All letters beside the ticket number are lowercase
 * branch name characters limit to 30
 
-exampale: NANO-1111-add-xx 
+Example: NANO-1111-add-xx 
