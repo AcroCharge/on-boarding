@@ -48,3 +48,14 @@ This tool is the one you're going to work with the most, so we advise you to lea
 * [MongoDB](https://www.mongodb.com/) - Our Main DB
 * [RabbitMQ](https://www.rabbitmq.com/) - Message brokers
 * [RabbitMQ](https://redis.io/) - In-memory data structure store using for cache
+
+### Conventions
+
+## Git Branch Naming
+our branches naming have a few points:
+* start with JIRA ticket number
+* short description ( one/two words)
+* All letters beside the ticket number are lowercase
+* branch name characters limit to 30
+
+examlae: NANO-1111-add-xx 
