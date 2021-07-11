@@ -4,6 +4,15 @@ Here you can find all you need to know in order for a more comfortable onboard p
 
 we sure some staff here you know, but it's here for a references guide
 
+## Installations
+* Brew - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+* [MongoCompass](https://www.mongodb.com/try/download/compass) 
+* [WireGuard](https://apps.apple.com/us/app/wireguard/id1441195209) - After that request configuration from @Ilya Sokolov or @Ivan Ochanov
+* [Lens](https://k8slens.dev/)
+* [Vanta](https://docs.google.com/document/u/1/d/1MgeUVfOOIiSQeMsrYM97zCAuxwKGIxFkWJWYFufhdng/edit#)
+* Docker - `brew cask install docker`
+* Yarn - `brew install yarn`
+
 ## Code
 here you will find all you need - code related
 ### General
@@ -47,13 +56,18 @@ This tool is the one you're going to work with the most, so we advise you to lea
 ### Tools
 * [MongoDB](https://www.mongodb.com/) - Our Main DB
 * [RabbitMQ](https://www.rabbitmq.com/) - Message brokers
-* [RabbitMQ](https://redis.io/) - In-memory data structure store using for cache
+* [Redis](https://redis.io/) - In-memory data structure store using for cache
 
-## Installations
-* Brew - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-* [MongoCompass](https://www.mongodb.com/try/download/compass) 
-* [WireGuard](https://apps.apple.com/us/app/wireguard/id1441195209) - After that request configuration from @Ilya Sokolov or @Ivan Ochanov
-* [Lens](https://k8slens.dev/)
-* [Vanta](https://docs.google.com/document/u/1/d/1MgeUVfOOIiSQeMsrYM97zCAuxwKGIxFkWJWYFufhdng/edit#)
-* Docker - `brew cask install docker`
-* Yarn - `brew install yarn`
+## Conventions
+
+### Git Branch Naming
+our branches naming have a few restrictions:
+* start with JIRA ticket number
+* short description ( one/two words)
+* All letters beside the ticket number are lowercase
+* branch name characters limit to 30
+
+Example: NANO-1111-add-xx 
+
+### Code Style
+we are using [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html) 
