@@ -14,6 +14,7 @@ we sure some staff here you know, but it's here for a references guide
 * Yarn - `brew install yarn`
 * [Visual Code](https://code.visualstudio.com/Download) or [Webstorm](https://www.jetbrains.com/idea/download/#section=mac)
 * Node - LTS
+* OpenApiGenerator - `brew install openapi-generator`
 
 ## Code
 here you will find all you need - code related
