@@ -16,6 +16,7 @@ we sure some staff here you know, but it's here for a references guide
 * Node - LTS
 * OpenApiGenerator - `brew install openapi-generator`
 * K8S - `brew install kubectl`
+* [Github Better PR](https://chrome.google.com/webstore/detail/better-pull-request-for-g/nfhdjopbhlggibjlimhdbogflgmbiahc)
 
 ## Code
 here you will find all you need - code related
