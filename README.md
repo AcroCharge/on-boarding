@@ -76,3 +76,10 @@ Example: NANO-1111-add-xx
 
 ### Code Style
 we are using [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html) 
+
+### Slack - Tool
+We are using slack as a communication tool, please join that channels:
+* alerts-prod
+* alerts-app
+
+
