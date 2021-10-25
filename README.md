@@ -1,4 +1,4 @@
-# Welcome aboard to AcroCharge!
+# Welcome aboard to Justt!
 
 Here you can find all you need to know in order for a more comfortable onboard process (tech-wise)
 
