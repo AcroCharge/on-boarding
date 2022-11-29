@@ -7,7 +7,7 @@ we sure some staff here you know, but it's here for a references guide
 ## Installations
 * Brew - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 * [MongoCompass](https://www.mongodb.com/try/download/compass) 
-* [WireGuard](https://apps.apple.com/us/app/wireguard/id1441195209) - After that request configuration from @Ilya Sokolov or @Ivan Ochanov
+* [Perimeter81 (VPN Agent)](https://support.perimeter81.com/docs/downloading-the-agent) - After that request configuration from IT
 * [Lens](https://k8slens.dev/)
 * [Vanta](https://docs.google.com/document/u/1/d/1MgeUVfOOIiSQeMsrYM97zCAuxwKGIxFkWJWYFufhdng/edit#)
 * Docker - `brew cask install docker`
