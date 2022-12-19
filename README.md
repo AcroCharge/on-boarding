@@ -10,10 +10,10 @@ we sure some staff here you know, but it's here for a references guide
 * [Perimeter81 (VPN Agent)](https://support.perimeter81.com/docs/downloading-the-agent) - After that request configuration from IT
 * [Lens](https://k8slens.dev/)
 * [Vanta](https://docs.google.com/document/u/1/d/1MgeUVfOOIiSQeMsrYM97zCAuxwKGIxFkWJWYFufhdng/edit#)
-* Docker - `brew cask install docker`
-* Yarn - `brew install yarn`
+* [Docker](https://www.docker.com/products/docker-desktop/)
 * [Visual Code](https://code.visualstudio.com/Download) or [Webstorm](https://www.jetbrains.com/idea/download/#section=mac)
-* Node - 14.17
+* Node - `brew install node@14` will install the latest node-14 (currently 14.21.2) which should be compatible with our project version (14.17).
+* Yarn - follow instructions: https://yarnpkg.com/getting-started/install#nodejs-1610-1
 * OpenApiGenerator - `brew install openapi-generator`
 * K8S - `brew install kubectl`
 * [Github Better PR](https://chrome.google.com/webstore/detail/better-pull-request-for-g/nfhdjopbhlggibjlimhdbogflgmbiahc)
@@ -21,11 +21,11 @@ we sure some staff here you know, but it's here for a references guide
 ## Code
 here you will find all you need - code related
 ### General
-* [Clean Code Book](https://enos.itcollege.ee/~jpoial/oop/naited/Clean%20Code.pdf)
+* [Clean Code Book](https://enos.itcollege.ee/~jpoial/oop/naited/Clean%20Code.pdf) (link is broken)
 
 ### JavaScript
 * [JavaScript: Understanding the Weird Parts](https://www.youtube.com/watch?v=Bv_5Zv5c-Ts&ab_channel=TonyAlicea)
-* [Async Await](https://nodejs.dev/learn/modern-asynchronous-javascript-with-async-and-await)
+* [Async Await](https://nodejs.dev/learn/modern-asynchronous-javascript-with-async-and-await) (link is broken)
 * [Clean Code in Javascript](https://github.com/ryanmcdermott/clean-code-javascript)
 
 ### TypeScript
