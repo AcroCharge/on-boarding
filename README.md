@@ -13,7 +13,7 @@ we sure some staff here you know, but it's here for a references guide
 * [Docker](https://www.docker.com/products/docker-desktop/)
 * [Visual Code](https://code.visualstudio.com/Download) or [Webstorm](https://www.jetbrains.com/idea/download/#section=mac)
 * Node - `brew install node@14` will install the latest node-14 (currently 14.21.2) which should be compatible with our project version (14.17).
-* Yarn - follow instructions: https://yarnpkg.com/getting-started/install#nodejs-1610-1
+* Yarn - based on node version, follow instructions: https://yarnpkg.com/getting-started/install#nodejs-1610-1 (followed by `corepack prepare yarn@1.22.19 --activate`)
 * OpenApiGenerator - `brew install openapi-generator`
 * K8S - `brew install kubectl`
 * [Github Better PR](https://chrome.google.com/webstore/detail/better-pull-request-for-g/nfhdjopbhlggibjlimhdbogflgmbiahc)
@@ -21,11 +21,11 @@ we sure some staff here you know, but it's here for a references guide
 ## Code
 here you will find all you need - code related
 ### General
-* [Clean Code Book](https://enos.itcollege.ee/~jpoial/oop/naited/Clean%20Code.pdf) (link is broken)
+* [Clean Code Book](https://thixalongmy.haugiang.gov.vn/media/1175/clean_code.pdf)
 
 ### JavaScript
 * [JavaScript: Understanding the Weird Parts](https://www.youtube.com/watch?v=Bv_5Zv5c-Ts&ab_channel=TonyAlicea)
-* [Async Await](https://nodejs.dev/learn/modern-asynchronous-javascript-with-async-and-await) (link is broken)
+* [Async Await](https://nodejs.bootcss.com/javascript-async-await)
 * [Clean Code in Javascript](https://github.com/ryanmcdermott/clean-code-javascript)
 
 ### TypeScript
