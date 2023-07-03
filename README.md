@@ -13,7 +13,7 @@ we sure some staff here you know, but it's here for a references guide
 * Docker - `brew cask install docker`
 * Yarn - `brew install yarn`
 * [Visual Code](https://code.visualstudio.com/Download) or [Webstorm](https://www.jetbrains.com/idea/download/#section=mac)
-* Node - 14.17
+* Node - 18.14
 * OpenApiGenerator - `brew install openapi-generator`
 * K8S - `brew install kubectl`
 * [Github Better PR](https://chrome.google.com/webstore/detail/better-pull-request-for-g/nfhdjopbhlggibjlimhdbogflgmbiahc)
