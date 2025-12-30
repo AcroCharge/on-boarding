@@ -61,6 +61,19 @@ here you will find all you need - code related
 ## Infrastructure
 In AcroCharge we are working in a microservices' architecture for our services. And, monorepo to store our code base
 
+### AWS CLI Setup
+For automated AWS Azure SSO CLI configuration, run:
+```bash
+./scripts/aws-setup.sh
+```
+This script will help you:
+- Install aws-azure-login tool
+- Configure AWS profiles (Development, Staging, Production, etc.)
+- Set up automated session renewal
+- Connect to Kubernetes clusters via Lens
+
+For detailed instructions, see [AWS Azure SSO for CLI access](https://acrocharge.atlassian.net/wiki/spaces/NANO/pages/164266065/AWS+Azure+SSO+for+CLI+access)
+
 ### Basics
 * [Docker](https://docs.docker.com/get-started/) - our services software containers
 * [Kubernetes](https://kubernetes.io/docs/tutorials/) - managing our dockers deployment and etc'
