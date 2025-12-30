@@ -5,6 +5,14 @@ Here you can find all you need to know in order for a more comfortable onboard p
 we sure some staff here you know, but it's here for a references guide
 
 ## Installations
+
+### Quick Install
+For automated installation of most tools, run:
+```bash
+./scripts/install.sh
+```
+
+### Manual Installation List
 * Brew - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 * [MongoCompass](https://www.mongodb.com/try/download/compass) 
 * [Harmony (VPN Agent)](https://support.perimeter81.com/docs/downloading-the-agent) - After that request configuration from IT
@@ -16,6 +24,10 @@ we sure some staff here you know, but it's here for a references guide
 * Node - 20.19
 * OpenApiGenerator - `brew install openapi-generator`
 * K8S - `brew install kubectl`
+
+## AI Development Tools
+* [Cursor](https://cursor.sh/) - AI-powered code editor with intelligent code completion and chat
+* [Claude](https://claude.ai/) - AI assistant for development tasks, code review, and problem-solving
 
 ## Code
 here you will find all you need - code related
