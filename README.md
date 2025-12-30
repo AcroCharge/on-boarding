@@ -59,7 +59,7 @@ This tool is the one you're going to work with the most, so we advise you to lea
 
 ### Tools
 * [MongoDB](https://www.mongodb.com/) - Our Main DB
-* [RabbitMQ](https://www.rabbitmq.com/) - Message brokers
+* [SQS](https://aws.amazon.com/sqs/), [EventBridge](https://aws.amazon.com/eventbridge/) - Message broker and pub/sub
 * [Redis](https://redis.io/) - In-memory data structure store using for cache
 
 ## Conventions
@@ -76,9 +76,6 @@ Example: NANO-1111-add-xx
 ### Code Style
 we are using [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html) 
 
-### Slack - Tool
-We are using slack as a communication tool, please join that channels:
-* alerts-prod
-* alerts-app
+
 
 
