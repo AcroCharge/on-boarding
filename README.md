@@ -4,6 +4,14 @@ Here you can find all you need to know in order for a more comfortable onboard p
 
 we sure some staff here you know, but it's here for a references guide
 
+## SSO Access
+
+After completing the initial setup, you can access all company applications and resources through our Single Sign-On (SSO) portal:
+
+**Hub URL:** https://myapps.microsoft.com/
+
+This centralized portal provides access to all integrated applications and services once your SSO is properly configured.
+
 ## Installations
 
 ### Quick Install
