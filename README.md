@@ -1,114 +1,234 @@
-# Welcome aboard to Justt!
+# 🚀 Welcome to Justt!
 
-Here you can find all you need to know in order for a more comfortable onboard process (tech-wise)
+Welcome aboard! This guide will help you get set up with everything you need for a smooth onboarding experience.
 
-we sure some staff here you know, but it's here for a references guide
+## 📋 Table of Contents
 
-## SSO Access
+- [Quick Start](#-quick-start)
+- [Prerequisites & Installation](#-prerequisites--installation)
+  - [Automated Installation](#automated-installation)
+  - [Required Tools](#required-tools)
+  - [Development Tools](#development-tools)
+- [Technology Stack](#-technology-stack)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+  - [Infrastructure & DevOps](#infrastructure--devops)
+- [Learning Resources](#-learning-resources)
+  - [General Best Practices](#general-best-practices)
+  - [JavaScript & TypeScript](#javascript--typescript)
+  - [Node.js](#nodejs)
+- [Development Conventions](#-development-conventions)
+  - [Git Branch Naming](#git-branch-naming)
+  - [Code Style](#code-style)
+- [Infrastructure & Architecture](#-infrastructure--architecture)
+  - [AWS CLI Setup](#aws-cli-setup)
+  - [Monorepo Management](#monorepo-management)
+  - [Services & Tools](#services--tools)
+- [Access & Authentication](#-access--authentication)
 
-After completing the initial setup, you can access all company applications and resources through our Single Sign-On (SSO) portal:
+---
 
-**Hub URL:** https://myapps.microsoft.com/
+## ⚡ Quick Start
 
-This centralized portal provides access to all integrated applications and services once your SSO is properly configured.
+1. Install all required tools using the automated script:
+   ```bash
+   ./scripts/install.sh
+   ```
 
-## Installations
+2. Configure AWS CLI and SSO:
+   ```bash
+   ./scripts/aws-setup.sh
+   ```
 
-### Quick Install
-For automated installation of most tools, run:
+3. Access company applications through [SSO Portal](https://myapps.microsoft.com/)
+
+---
+
+## 🛠️ Prerequisites & Installation
+
+### Automated Installation
+
+Run the following script to install most tools automatically:
+
 ```bash
 ./scripts/install.sh
 ```
 
-### Manual Installation List
-* Brew - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-* [MongoCompass](https://www.mongodb.com/try/download/compass) 
-* [Harmony (VPN Agent)](https://support.perimeter81.com/docs/downloading-the-agent) - After that request configuration from IT
-* [Lens](https://k8slens.dev/)
-* [Vanta](https://docs.google.com/document/u/1/d/1MgeUVfOOIiSQeMsrYM97zCAuxwKGIxFkWJWYFufhdng/edit#)
-* Docker - `brew cask install docker`
-* Yarn - `brew install yarn`
-* [Visual Code](https://code.visualstudio.com/Download) or [Webstorm](https://www.jetbrains.com/idea/download/#section=mac)
-* Node - 20.19
-* OpenApiGenerator - `brew install openapi-generator`
-* K8S - `brew install kubectl`
+### Required Tools
 
-## AI Development Tools
-* [Cursor](https://cursor.sh/) - AI-powered code editor with intelligent code completion and chat
-* [Claude](https://claude.ai/) - AI assistant for development tasks, code review, and problem-solving
+| Tool | Installation | Purpose |
+|------|--------------|---------|
+| 🍺 **Homebrew** | `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` | Package manager for macOS |
+| 🐳 **Docker** | `brew install --cask docker` | Container platform |
+| 📦 **Node.js** | Version 20.19 | JavaScript runtime |
+| 🧶 **Yarn** | `brew install yarn` | Package manager |
+| ☸️ **kubectl** | `brew install kubectl` | Kubernetes CLI |
+| 🔧 **OpenAPI Generator** | `brew install openapi-generator` | API client generation |
 
-## Code
-here you will find all you need - code related
-### General
-* [Clean Code Book](https://enos.itcollege.ee/~jpoial/oop/naited/Clean%20Code.pdf)
+### Development Tools
 
-### JavaScript
-* [JavaScript: Understanding the Weird Parts](https://www.youtube.com/watch?v=Bv_5Zv5c-Ts&ab_channel=TonyAlicea)
-* [Async Await](https://nodejs.dev/learn/modern-asynchronous-javascript-with-async-and-await)
-* [Clean Code in Javascript](https://github.com/ryanmcdermott/clean-code-javascript)
+#### Code Editors
+- 💻 [Visual Studio Code](https://code.visualstudio.com/Download) or [WebStorm](https://www.jetbrains.com/idea/download/#section=mac)
+- 🤖 [Cursor](https://cursor.sh/) - AI-powered code editor with intelligent completion
+- 🧠 [Claude](https://claude.ai/) - AI assistant for development tasks and code review
 
-### TypeScript
-* [The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
-* [Best Practices using TypeScript with Node.js](https://www.youtube.com/watch?v=ATUvAQZaTbM&ab_channel=node.js)
+#### Database & Infrastructure Tools
+- 🍃 [MongoDB Compass](https://www.mongodb.com/try/download/compass) - MongoDB GUI
+- 👁️ [Lens](https://k8slens.dev/) - Kubernetes IDE
+- 🔒 [Harmony VPN](https://support.perimeter81.com/docs/downloading-the-agent) - VPN client (request config from IT)
+- 🛡️ [Vanta](https://docs.google.com/document/u/1/d/1MgeUVfOOIiSQeMsrYM97zCAuxwKGIxFkWJWYFufhdng/edit#) - Security compliance
+
+---
+
+## 🏗️ Technology Stack
+
+### Frontend
+
+| Technology | Purpose | Documentation |
+|------------|---------|---------------|
+| ⚛️ **Next.js** | React framework for client service | [Docs](https://nextjs.org/docs) |
+| 🎨 **Tailwind UI** | CSS framework | [Docs](https://tailwindui.com/) |
+| 💅 **Styled Components** | CSS-in-JS styling | [Docs](https://styled-components.com/) |
+| 🔄 **React Query** | Data fetching, caching & state management | [Docs](https://react-query.tanstack.com/) |
+
+### Backend
+
+| Technology | Purpose | Documentation |
+|------------|---------|---------------|
+| 🟢 **Node.js** | JavaScript runtime | Version 20.19 |
+| 📘 **TypeScript** | Type-safe JavaScript | [Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) |
+| 🪺 **Nest.js** | Backend framework for microservices | [Docs](https://docs.nestjs.com/) |
+| 🍃 **MongoDB** | Primary database | [Docs](https://www.mongodb.com/) |
+| 📊 **Mongoose** | MongoDB ORM | [Docs](https://mongoosejs.com/docs/guide.html) |
+
+### Infrastructure & DevOps
+
+| Technology | Purpose | Documentation |
+|------------|---------|---------------|
+| 🐳 **Docker** | Container platform | [Docs](https://docs.docker.com/get-started/) |
+| ☸️ **Kubernetes** | Container orchestration | [Docs](https://kubernetes.io/docs/tutorials/) |
+| 🔄 **NX** | Monorepo management *(critical)* | [Docs](https://nx.dev/latest/angular/getting-started/intro) |
+| ☁️ **AWS** | Cloud infrastructure | Multiple services |
+| 📬 **SQS** | Message queue | [Docs](https://aws.amazon.com/sqs/) |
+| 📡 **EventBridge** | Event bus & pub/sub | [Docs](https://aws.amazon.com/eventbridge/) |
+| ⚡ **Redis** | In-memory cache | [Docs](https://redis.io/) |
+
+> **⚠️ Important:** NX is essential for managing our monorepo, services, dependencies, and common libraries. You'll work with this tool frequently, so invest time in learning it well.
+
+---
+
+## 📚 Learning Resources
+
+### General Best Practices
+
+- 📖 [Clean Code Book](https://enos.itcollege.ee/~jpoial/oop/naited/Clean%20Code.pdf) - Essential reading for code quality
+
+### JavaScript & TypeScript
+
+#### JavaScript
+- 🎥 [JavaScript: Understanding the Weird Parts](https://www.youtube.com/watch?v=Bv_5Zv5c-Ts&ab_channel=TonyAlicea) - Deep dive into JS fundamentals
+- 🔄 [Async/Await Guide](https://nodejs.dev/learn/modern-asynchronous-javascript-with-async-and-await) - Modern async patterns
+- ✨ [Clean Code in JavaScript](https://github.com/ryanmcdermott/clean-code-javascript) - Best practices
+
+#### TypeScript
+- 📘 [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) - Official documentation
+- 🎥 [TypeScript with Node.js Best Practices](https://www.youtube.com/watch?v=ATUvAQZaTbM&ab_channel=node.js) - Practical guide
 
 ### Node.js
-* [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 
-## Common Libraries
-### Backend libraries
-* We are using mongodb as our main DB and [mongoose](https://mongoosejs.com/docs/guide.html) as our ORM
-### Frontend libraries
-* We are using [tailwindui](https://tailwindui.com/) as our main CSS framework, alongside [styledcomponents](https://styled-components.com/)
-* As a fetch, sync, update and cache data in the client side, we are using [Reach Query](https://react-query.tanstack.com/)
+- ⭐ [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices) - Comprehensive guide
 
-### Frameworks
-* **Nest.js** framework in use in some of our backend services. here you can find [Nest.js Documentation](https://docs.nestjs.com/)
-* we're using **Next.js** framework in our client service. here you can find [Next.js Documentation](https://nextjs.org/docs)
+---
 
+## 📐 Development Conventions
 
-## Infrastructure
-In AcroCharge we are working in a microservices' architecture for our services. And, monorepo to store our code base
+### Git Branch Naming
+
+Follow these rules for branch naming:
+
+- ✅ Start with JIRA ticket number (e.g., `NANO-1111`)
+- ✅ Add short description (1-2 words)
+- ✅ Use lowercase for description
+- ✅ Maximum 30 characters total
+
+**Example:** `NANO-1111-add-auth`
+
+**Format:** `[JIRA-KEY]-[brief-description]`
+
+### Code Style
+
+We follow the [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html)
+
+---
+
+## 🏢 Infrastructure & Architecture
+
+Justt uses a **microservices architecture** with a **monorepo** to manage our codebase.
 
 ### AWS CLI Setup
-For automated AWS Azure SSO CLI configuration, run:
+
+Automated AWS Azure SSO configuration:
+
 ```bash
 ./scripts/aws-setup.sh
 ```
-This script will help you:
-- Install aws-azure-login tool
-- Configure AWS profiles (Development, Staging, Production, etc.)
-- Set up automated session renewal
-- Connect to Kubernetes clusters via Lens
 
-For detailed instructions, see [AWS Azure SSO for CLI access](https://acrocharge.atlassian.net/wiki/spaces/NANO/pages/164266065/AWS+Azure+SSO+for+CLI+access)
+This script will:
+- ✅ Install aws-azure-login tool
+- ✅ Configure AWS profiles (Development, Staging, Production)
+- ✅ Set up automated session renewal
+- ✅ Connect to Kubernetes clusters via Lens
 
-### Basics
-* [Docker](https://docs.docker.com/get-started/) - our services software containers
-* [Kubernetes](https://kubernetes.io/docs/tutorials/) - managing our dockers deployment and etc'
+📚 [Full AWS Azure SSO Documentation](https://acrocharge.atlassian.net/wiki/spaces/NANO/pages/164266065/AWS+Azure+SSO+for+CLI+access)
 
-### Mandatory
-In order to manage our monorepo, our services, dependencies, and common libraries we are using [NX framework](https://nx.dev/latest/angular/getting-started/intro).
-This tool is the one you're going to work with the most, so we advise you to learn it well.
+### Monorepo Management
 
-### Tools
-* [MongoDB](https://www.mongodb.com/) - Our Main DB
-* [SQS](https://aws.amazon.com/sqs/), [EventBridge](https://aws.amazon.com/eventbridge/) - Message broker and pub/sub
-* [Redis](https://redis.io/) - In-memory data structure store using for cache
+We use **NX Framework** to manage:
+- 📦 Services
+- 🔗 Dependencies
+- 📚 Common libraries
+- 🔄 Build orchestration
 
-## Conventions
+**This is your primary development tool** - make sure to learn it thoroughly!
 
-### Git Branch Naming
-our branches naming have a few restrictions:
-* start with JIRA ticket number
-* short description ( one/two words)
-* All letters beside the ticket number are lowercase
-* branch name characters limit to 30
+### Services & Tools
 
-Example: NANO-1111-add-xx 
+| Service | Purpose |
+|---------|---------|
+| 🍃 **MongoDB** | Primary database |
+| 📬 **SQS** | Message queue for async processing |
+| 📡 **EventBridge** | Event-driven architecture & pub/sub |
+| ⚡ **Redis** | Caching layer |
+| 🐳 **Docker** | Service containerization |
+| ☸️ **Kubernetes** | Deployment & orchestration |
 
-### Code Style
-we are using [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html) 
+---
 
+## 🔐 Access & Authentication
 
+### SSO Portal
+
+After completing the initial setup, access all company applications through:
+
+**🌐 Hub URL:** https://myapps.microsoft.com/
+
+This centralized portal provides access to all integrated applications and services once your SSO is configured.
+
+---
+
+## 🎯 Next Steps
+
+1. ✅ Complete all installations
+2. ✅ Configure AWS CLI and SSO
+3. ✅ Review learning resources
+4. ✅ Familiarize yourself with NX framework
+5. ✅ Read the Clean Code book
+6. ✅ Review our code style guide
+
+**Questions?** Reach out to your team lead or check our internal wiki!
+
+---
+
+*Last updated: December 2025*
 
 
