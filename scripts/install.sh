@@ -154,8 +154,9 @@ echo "   Follow instructions: https://docs.google.com/document/u/1/d/1MgeUVfOOIi
 echo ""
 echo "3. Code Editor (Choose one):"
 echo "   - Visual Studio Code: https://code.visualstudio.com/Download"
-echo "   - WebStorm: https://www.jetbrains.com/idea/download/#section=mac"
 echo "   - Cursor: https://cursor.com/download"
+echo "   - Claude: https://claude.com/download"
+echo "   - WebStorm: https://www.jetbrains.com/idea/download/#section=mac"
 echo ""
 
 echo "================================================"
