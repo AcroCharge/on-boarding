@@ -65,16 +65,6 @@ git config --global --add safe.directory /usr/local/Homebrew
 
 ---
 
-## 🛠️ Prerequisites & Installation
-
-### Automated Installation
-
-Run the following script to install most tools automatically:
-
-```bash
-./scripts/install.sh
-```
-
 ### Required Tools
 
 | Tool | Installation | Purpose |
@@ -92,6 +82,7 @@ Run the following script to install most tools automatically:
 - 💻 **Visual Studio Code**: `brew install --cask visual-studio-code`
 - 🤖 **Cursor**: `brew install --cask cursor` - AI-powered code editor
 - 🧠 **Claude**: `brew install --cask claude` - AI assistant for development tasks
+- 🌪️ **WebStorm**: [Download](https://www.jetbrains.com/idea/download/#section=mac)
 
 #### Database & Infrastructure Tools
 - 🍃 [MongoDB Compass](https://www.mongodb.com/try/download/compass) - MongoDB GUI
@@ -185,22 +176,6 @@ We follow the [Google TypeScript Style Guide](https://google.github.io/styleguid
 ## 🏢 Infrastructure & Architecture
 
 Justt uses a **microservices architecture** with a **monorepo** to manage our codebase.
-
-### AWS CLI Setup
-
-Automated AWS Azure SSO configuration:
-
-```bash
-./scripts/aws-setup.sh
-```
-
-This script will:
-- ✅ Install aws-azure-login tool
-- ✅ Configure AWS profiles (Development, Staging, Production)
-- ✅ Set up automated session renewal
-- ✅ Connect to Kubernetes clusters via Lens
-
-📚 [Full AWS Azure SSO Documentation](https://acrocharge.atlassian.net/wiki/spaces/NANO/pages/164266065/AWS+Azure+SSO+for+CLI+access)
 
 ### Monorepo Management
 
