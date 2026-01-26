@@ -88,7 +88,7 @@ git config --global --add safe.directory /usr/local/Homebrew
 - 💻 **Visual Studio Code**: `brew install --cask visual-studio-code`
 - 🤖 **Cursor**: `brew install --cask cursor` - AI-powered code editor
 - 🧠 **Claude**: `brew install --cask claude` - AI assistant for development tasks
-- 🌪️ **WebStorm**: [Download](https://www.jetbrains.com/idea/download/#section=mac)
+- 🌪️ **WebStorm**: [Download](https://www.jetbrains.com/webstorm/download/?section=mac)
 
 #### Database & Infrastructure Tools
 - 🍃 [MongoDB Compass](https://www.mongodb.com/try/download/compass) - MongoDB GUI

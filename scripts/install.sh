@@ -156,7 +156,7 @@ echo "3. Code Editor (Choose one):"
 echo "   - Visual Studio Code: https://code.visualstudio.com/Download"
 echo "   - Cursor: https://cursor.com/download"
 echo "   - Claude: https://claude.com/download"
-echo "   - WebStorm: https://www.jetbrains.com/idea/download/#section=mac"
+echo "   - WebStorm: https://www.jetbrains.com/webstorm/download/?section=mac"
 echo ""
 
 echo "================================================"
