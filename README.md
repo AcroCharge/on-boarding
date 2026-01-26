@@ -90,6 +90,8 @@ git config --global --add safe.directory /usr/local/Homebrew
 - 🔒 [Harmony VPN](https://support.perimeter81.com/docs/downloading-the-agent) - VPN client (request config from IT)
 - 🛡️ [Vanta](https://docs.google.com/document/u/1/d/1MgeUVfOOIiSQeMsrYM97zCAuxwKGIxFkWJWYFufhdng/edit#) - Security compliance
 
+#### MCP Servers in your code editor
+- Follow [this](https://acrocharge.atlassian.net/wiki/spaces/AI/pages/1346240517/Jira+MCP+Integration+Setup+Guide) guide to set up your Atlassian MCP server
 ---
 
 ## 🏗️ Technology Stack
