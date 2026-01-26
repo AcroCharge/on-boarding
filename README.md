@@ -44,7 +44,7 @@ git config --global --add safe.directory /usr/local/Homebrew
 
 ### Installation Steps
 
-1. Install all required tools using the automated script:
+1. Install all [required tools](#required-tools) using the automated script:
    ```bash
    ./scripts/install.sh
    ```
@@ -59,6 +59,12 @@ git config --global --add safe.directory /usr/local/Homebrew
    ```bash
    ./scripts/aws-setup.sh
    ```
+   This will:
+   - ✅ Install aws-azure-login tool
+   - ✅ Configure AWS profiles (Development, Staging, Production)
+   - ✅ Set up automated session renewal
+   - ✅ Connect to Kubernetes clusters via Lens
+   
    > **Note:** The script will ask you to configure your AWS profile. You'll need the Azure Tenant ID and App ID from the [AWS Azure SSO Documentation](https://acrocharge.atlassian.net/wiki/spaces/NANO/pages/164266065/AWS+Azure+SSO+for+CLI+access). Sign in with your company account to access this page.
 
 4. Access company applications through [SSO Portal](https://myapps.microsoft.com/)
