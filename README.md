@@ -50,6 +50,14 @@ git config --global --add safe.directory /usr/local/Homebrew
    ```
 
 2. **Important:** After installation, add Node.js to your PATH by adding this to your `~/.zshrc`:
+   
+   If you're using an Apple chip MacBook, run:
+   ```bash
+   echo 'export PATH="/opt/homebrew/opt/node@20/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
+   
+   Otherwise, run:
    ```bash
    echo 'export PATH="/usr/local/opt/node@20/bin:$PATH"' >> ~/.zshrc
    source ~/.zshrc
@@ -64,7 +72,7 @@ git config --global --add safe.directory /usr/local/Homebrew
    - ✅ Configure AWS profiles (Development, Staging, Production)
    - ✅ Set up automated session renewal
    - ✅ Connect to Kubernetes clusters via Lens
-   
+
    > **Note:** The script will ask you to configure your AWS profile. You'll need the Azure Tenant ID and App ID from the [AWS Azure SSO Documentation](https://acrocharge.atlassian.net/wiki/spaces/NANO/pages/164266065/AWS+Azure+SSO+for+CLI+access). Sign in with your company account to access this page.
 
 4. Access company applications through [SSO Portal](https://myapps.microsoft.com/)
@@ -271,6 +279,13 @@ brew link --overwrite kubernetes-cli
 
 Node@20 is installed but not linked. Add it to your PATH:
 
+If you're using an Apple chip MacBook, run:
+```bash
+echo 'export PATH="/opt/homebrew/opt/node@20/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+Otherwise, run:
 ```bash
 echo 'export PATH="/usr/local/opt/node@20/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
@@ -287,4 +302,3 @@ echo "Node: $(node --version 2>/dev/null || echo 'NOT FOUND')"
 echo "kubectl: $(kubectl version --client 2>/dev/null | head -1 || echo 'NOT FOUND')"
 echo "openapi-generator: $(openapi-generator version 2>/dev/null || echo 'NOT FOUND')"
 ```
-
