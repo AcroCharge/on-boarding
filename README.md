@@ -44,7 +44,7 @@ git config --global --add safe.directory /usr/local/Homebrew
 
 ### Installation Steps
 
-1. Install all required tools using the automated script:
+1. Install all [required tools](#required-tools) using the automated script:
    ```bash
    ./scripts/install.sh
    ```
@@ -59,21 +59,17 @@ git config --global --add safe.directory /usr/local/Homebrew
    ```bash
    ./scripts/aws-setup.sh
    ```
+   This will:
+   - ✅ Install aws-azure-login tool
+   - ✅ Configure AWS profiles (Development, Staging, Production)
+   - ✅ Set up automated session renewal
+   - ✅ Connect to Kubernetes clusters via Lens
+   
    > **Note:** The script will ask you to configure your AWS profile. You'll need the Azure Tenant ID and App ID from the [AWS Azure SSO Documentation](https://acrocharge.atlassian.net/wiki/spaces/NANO/pages/164266065/AWS+Azure+SSO+for+CLI+access). Sign in with your company account to access this page.
 
 4. Access company applications through [SSO Portal](https://myapps.microsoft.com/)
 
 ---
-
-## 🛠️ Prerequisites & Installation
-
-### Automated Installation
-
-Run the following script to install most tools automatically:
-
-```bash
-./scripts/install.sh
-```
 
 ### Required Tools
 
@@ -92,6 +88,7 @@ Run the following script to install most tools automatically:
 - 💻 **Visual Studio Code**: `brew install --cask visual-studio-code`
 - 🤖 **Cursor**: `brew install --cask cursor` - AI-powered code editor
 - 🧠 **Claude**: `brew install --cask claude` - AI assistant for development tasks
+- 🌪️ **WebStorm**: [Download](https://www.jetbrains.com/webstorm/download/)
 
 #### Database & Infrastructure Tools
 - 🍃 [MongoDB Compass](https://www.mongodb.com/try/download/compass) - MongoDB GUI
@@ -99,6 +96,8 @@ Run the following script to install most tools automatically:
 - 🔒 [Harmony VPN](https://support.perimeter81.com/docs/downloading-the-agent) - VPN client (request config from IT)
 - 🛡️ [Vanta](https://docs.google.com/document/u/1/d/1MgeUVfOOIiSQeMsrYM97zCAuxwKGIxFkWJWYFufhdng/edit#) - Security compliance
 
+#### MCP Servers in your code editor
+- Follow [this](https://acrocharge.atlassian.net/wiki/spaces/AI/pages/1346240517/Jira+MCP+Integration+Setup+Guide) guide to set up your Atlassian MCP server
 ---
 
 ## 🏗️ Technology Stack
@@ -185,22 +184,6 @@ We follow the [Google TypeScript Style Guide](https://google.github.io/styleguid
 ## 🏢 Infrastructure & Architecture
 
 Justt uses a **microservices architecture** with a **monorepo** to manage our codebase.
-
-### AWS CLI Setup
-
-Automated AWS Azure SSO configuration:
-
-```bash
-./scripts/aws-setup.sh
-```
-
-This script will:
-- ✅ Install aws-azure-login tool
-- ✅ Configure AWS profiles (Development, Staging, Production)
-- ✅ Set up automated session renewal
-- ✅ Connect to Kubernetes clusters via Lens
-
-📚 [Full AWS Azure SSO Documentation](https://acrocharge.atlassian.net/wiki/spaces/NANO/pages/164266065/AWS+Azure+SSO+for+CLI+access)
 
 ### Monorepo Management
 
