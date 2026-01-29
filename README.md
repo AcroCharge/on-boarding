@@ -25,6 +25,7 @@ Welcome aboard! This guide will help you get set up with everything you need for
   - [AWS CLI Setup](#aws-cli-setup)
   - [Monorepo Management](#monorepo-management)
   - [Services & Tools](#services--tools)
+  - [Environment Configuration](#environment-configuration)
 - [Access & Authentication](#-access--authentication)
 
 ---
@@ -223,6 +224,36 @@ We use **NX Framework** to manage:
 | ⚡ **Redis** | Caching layer |
 | 🐳 **Docker** | Service containerization |
 | ☸️ **Kubernetes** | Deployment & orchestration |
+
+### Environment Configuration
+
+#### NANO Monorepo
+
+**NANO** is our main monorepo that contains all microservices, shared libraries, and configuration. Once you clone and set up NANO, you'll need to configure your local development environment.
+
+#### Local Configuration (`local-values.json`)
+
+The `@ac/config` library manages centralized configuration for all services. For local development, you need to download environment-specific values:
+
+**📥 How to get your local configuration:**
+
+1. Make sure you're logged into AWS (Development account) via SSO
+2. Go to [AWS Secrets Manager - local-values](https://us-east-1.console.aws.amazon.com/secretsmanager/secret?name=local-values&region=us-east-1)
+3. Click **"Retrieve secret value"**
+4. Copy the JSON content
+5. Save it as `local-values.json` in your NANO repo at:
+   ```
+   libs/utils/config/src/local-values.json
+   ```
+
+This file contains:
+- Database connection strings (MongoDB, PostgreSQL, Redis)
+- API keys for payment providers (Stripe, Braintree, PayPal)
+- AWS service configurations
+- Auth0 credentials
+- Observability settings (Datadog, Sentry)
+
+> **⚠️ Important:** Never commit `local-values.json` to git. It's already in `.gitignore`.
 
 ---
 
