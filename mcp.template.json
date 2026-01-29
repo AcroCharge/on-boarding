@@ -1,0 +1,46 @@
+{
+  "mcpServers": {
+    "example-atlassian": {
+      "comment": "Atlassian (Jira/Confluence) integration via Docker",
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "ghcr.io/sooperset/mcp-atlassian:latest",
+        "--confluence-url=YOUR_CONFLUENCE_URL",
+        "--confluence-username=YOUR_EMAIL",
+        "--confluence-token=YOUR_CONFLUENCE_TOKEN",
+        "--jira-url=YOUR_JIRA_URL",
+        "--jira-username=YOUR_EMAIL",
+        "--jira-token=YOUR_JIRA_TOKEN"
+      ]
+    },
+    "github": {
+      "comment": "Example: URL-based MCP server with authentication",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer YOUR_GITHUB_PAT_TOKEN"
+      }
+    },
+    "groundcover": {
+      "comment": "Example: Groundcover observability platform integration",
+      "command": "/usr/local/opt/node@20/bin/npx",
+      "args": [
+        "-y",
+        "mcp-remote@0.1.30",
+        "https://mcp.groundcover.com/api/mcp",
+        "YOUR_PORT",
+        "--header",
+        "X-Timezone:YOUR_TIMEZONE",
+        "--header",
+        "X-Tenant-UUID:YOUR_TENANT_UUID",
+        "--header",
+        "X-Backend-Id:groundcover"
+      ],
+      "env": {
+        "PATH": "/usr/local/opt/node@20/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    }
+  }
+}

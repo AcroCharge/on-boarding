@@ -9,6 +9,7 @@ Welcome aboard! This guide will help you get set up with everything you need for
   - [Automated Installation](#automated-installation)
   - [Required Tools](#required-tools)
   - [Development Tools](#development-tools)
+  - [MCP Configuration](#mcp-model-context-protocol-configuration)
 - [Technology Stack](#-technology-stack)
   - [Frontend](#frontend)
   - [Backend](#backend)
@@ -77,6 +78,17 @@ Run the following script to install most tools automatically:
 - 👁️ [Lens](https://k8slens.dev/) - Kubernetes IDE
 - 🔒 [Harmony VPN](https://support.perimeter81.com/docs/downloading-the-agent) - VPN client (request config from IT)
 - 🛡️ [Vanta](https://docs.google.com/document/u/1/d/1MgeUVfOOIiSQeMsrYM97zCAuxwKGIxFkWJWYFufhdng/edit#) - Security compliance
+
+#### MCP (Model Context Protocol) Configuration
+
+If you're using Cursor or other AI-powered IDEs, you can configure MCP servers to extend AI capabilities:
+
+- 📋 **[MCP Template](./mcp.template.json)** - Template configuration file with examples
+
+Available integrations:
+- 🐙 GitHub
+- 📈 Groundcover (observability)
+- 🔗 Custom services via n8n
 
 ---
 
