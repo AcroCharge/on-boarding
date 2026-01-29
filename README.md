@@ -31,29 +31,54 @@ Welcome aboard! This guide will help you get set up with everything you need for
 
 ## ⚡ Quick Start
 
-1. Install all required tools using the automated script:
+### Before You Begin
+
+Run these commands first to prevent common installation issues:
+
+```bash
+# Fix Homebrew permissions (you may need to enter your password)
+sudo chown -R $(whoami) /usr/local/share/zsh /usr/local/share/zsh/site-functions
+
+# Add Homebrew directory as safe for git
+git config --global --add safe.directory /usr/local/Homebrew
+```
+
+### Installation Steps
+
+1. Install all [required tools](#required-tools) using the automated script:
    ```bash
    ./scripts/install.sh
    ```
 
-2. Configure AWS CLI and SSO:
+2. **Important:** After installation, add Node.js to your PATH by adding this to your `~/.zshrc`:
+   
+   If you're using an Apple chip MacBook, run:
+   ```bash
+   echo 'export PATH="/opt/homebrew/opt/node@20/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
+   
+   Otherwise, run:
+   ```bash
+   echo 'export PATH="/usr/local/opt/node@20/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
+
+3. Configure AWS CLI and SSO:
    ```bash
    ./scripts/aws-setup.sh
    ```
+   This will:
+   - ✅ Install aws-azure-login tool
+   - ✅ Configure AWS profiles (Development, Staging, Production)
+   - ✅ Set up automated session renewal
+   - ✅ Connect to Kubernetes clusters via Lens
 
-3. Access company applications through [SSO Portal](https://myapps.microsoft.com/)
+   > **Note:** The script will ask you to configure your AWS profile. You'll need the Azure Tenant ID and App ID from the [AWS Azure SSO Documentation](https://acrocharge.atlassian.net/wiki/spaces/NANO/pages/164266065/AWS+Azure+SSO+for+CLI+access). Sign in with your company account to access this page.
+
+4. Access company applications through [SSO Portal](https://myapps.microsoft.com/)
 
 ---
-
-## 🛠️ Prerequisites & Installation
-
-### Automated Installation
-
-Run the following script to install most tools automatically:
-
-```bash
-./scripts/install.sh
-```
 
 ### Required Tools
 
@@ -69,9 +94,10 @@ Run the following script to install most tools automatically:
 ### Development Tools
 
 #### Code Editors
-- 💻 [Visual Studio Code](https://code.visualstudio.com/Download) or [WebStorm](https://www.jetbrains.com/idea/download/#section=mac)
-- 🤖 [Cursor](https://cursor.sh/) - AI-powered code editor with intelligent completion
-- 🧠 [Claude](https://claude.ai/) - AI assistant for development tasks and code review
+- 💻 **Visual Studio Code**: `brew install --cask visual-studio-code`
+- 🤖 **Cursor**: `brew install --cask cursor` - AI-powered code editor
+- 🧠 **Claude**: `brew install --cask claude` - AI assistant for development tasks
+- 🌪️ **WebStorm**: [Download](https://www.jetbrains.com/webstorm/download/)
 
 #### Database & Infrastructure Tools
 - 🍃 [MongoDB Compass](https://www.mongodb.com/try/download/compass) - MongoDB GUI
@@ -177,22 +203,6 @@ We follow the [Google TypeScript Style Guide](https://google.github.io/styleguid
 
 Justt uses a **microservices architecture** with a **monorepo** to manage our codebase.
 
-### AWS CLI Setup
-
-Automated AWS Azure SSO configuration:
-
-```bash
-./scripts/aws-setup.sh
-```
-
-This script will:
-- ✅ Install aws-azure-login tool
-- ✅ Configure AWS profiles (Development, Staging, Production)
-- ✅ Set up automated session renewal
-- ✅ Connect to Kubernetes clusters via Lens
-
-📚 [Full AWS Azure SSO Documentation](https://acrocharge.atlassian.net/wiki/spaces/NANO/pages/164266065/AWS+Azure+SSO+for+CLI+access)
-
 ### Monorepo Management
 
 We use **NX Framework** to manage:
@@ -241,6 +251,64 @@ This centralized portal provides access to all integrated applications and servi
 
 ---
 
-*Last updated: December 2025*
+*Last updated: January 2026*
 
+---
 
+## 🔧 Troubleshooting
+
+### "not in a git directory" error during `brew update`
+
+This happens when Homebrew's git repository is corrupted. Fix it with:
+
+```bash
+git config --global --add safe.directory /usr/local/Homebrew
+cd /usr/local/Homebrew
+git remote add origin https://github.com/Homebrew/brew.git 2>/dev/null || true
+git fetch origin
+git checkout -f origin/master
+```
+
+### "directories are not writable by your user" error
+
+Fix permissions with:
+
+```bash
+sudo chown -R $(whoami) /usr/local/share/zsh /usr/local/share/zsh/site-functions
+```
+
+### kubectl or other tools "not found" after installation
+
+Some tools need to be linked manually:
+
+```bash
+brew link --overwrite kubernetes-cli
+```
+
+### Node.js not found after installation
+
+Node@20 is installed but not linked. Add it to your PATH:
+
+If you're using an Apple chip MacBook, run:
+```bash
+echo 'export PATH="/opt/homebrew/opt/node@20/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+Otherwise, run:
+```bash
+echo 'export PATH="/usr/local/opt/node@20/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+### Verify all tools are installed
+
+Run this command to check all required tools:
+
+```bash
+echo "Docker: $(docker --version 2>/dev/null || echo 'NOT FOUND')"
+echo "Yarn: $(yarn --version 2>/dev/null || echo 'NOT FOUND')"
+echo "Node: $(node --version 2>/dev/null || echo 'NOT FOUND')"
+echo "kubectl: $(kubectl version --client 2>/dev/null | head -1 || echo 'NOT FOUND')"
+echo "openapi-generator: $(openapi-generator version 2>/dev/null || echo 'NOT FOUND')"
+```
