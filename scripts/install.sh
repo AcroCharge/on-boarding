@@ -66,14 +66,14 @@ else
     print_success "Docker installed successfully"
 fi
 
-# Install Yarn
+# Install PNPM
 echo ""
-echo "Installing Yarn..."
-if command -v yarn &> /dev/null; then
-    print_success "Yarn is already installed"
+echo "Installing PNPM..."
+if command -v pnpm &> /dev/null; then
+    print_success "PNPM is already installed"
 else
-    brew install yarn
-    print_success "Yarn installed successfully"
+    brew install pnpm
+    print_success "PNPM installed successfully"
 fi
 
 # Install Node 20.19 (using nvm for version management)
@@ -172,4 +172,3 @@ echo "2. Complete manual installations"
 echo "3. Request VPN configuration from IT"
 echo "4. Clone the necessary repositories"
 echo ""
-
