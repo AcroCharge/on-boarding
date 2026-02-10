@@ -52,13 +52,13 @@ git config --global --add safe.directory /usr/local/Homebrew
    ```
 
 2. **Important:** After installation, add Node.js to your PATH by adding this to your `~/.zshrc`:
-   
+
    If you're using an Apple chip MacBook, run:
    ```bash
    echo 'export PATH="/opt/homebrew/opt/node@20/bin:$PATH"' >> ~/.zshrc
    source ~/.zshrc
    ```
-   
+
    Otherwise, run:
    ```bash
    echo 'export PATH="/usr/local/opt/node@20/bin:$PATH"' >> ~/.zshrc
@@ -88,7 +88,7 @@ git config --global --add safe.directory /usr/local/Homebrew
 | 🍺 **Homebrew** | `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` | Package manager for macOS |
 | 🐳 **Docker** | `brew install --cask docker` | Container platform |
 | 📦 **Node.js** | Version 20.19 | JavaScript runtime |
-| 🧶 **Yarn** | `brew install yarn` | Package manager |
+| 🧶 **PNPM** | `brew install pnpm` | Package manager |
 | ☸️ **kubectl** | `brew install kubectl` | Kubernetes CLI |
 | 🔧 **OpenAPI Generator** | `brew install openapi-generator` | API client generation |
 
@@ -338,7 +338,7 @@ Run this command to check all required tools:
 
 ```bash
 echo "Docker: $(docker --version 2>/dev/null || echo 'NOT FOUND')"
-echo "Yarn: $(yarn --version 2>/dev/null || echo 'NOT FOUND')"
+echo "PNPM: $(pnpm --version 2>/dev/null || echo 'NOT FOUND')"
 echo "Node: $(node --version 2>/dev/null || echo 'NOT FOUND')"
 echo "kubectl: $(kubectl version --client 2>/dev/null | head -1 || echo 'NOT FOUND')"
 echo "openapi-generator: $(openapi-generator version 2>/dev/null || echo 'NOT FOUND')"
